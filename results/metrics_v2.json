@@ -1,0 +1,258 @@
+{
+ "dataset": {
+  "n": 1768,
+  "phishing": 1031,
+  "legit": 737,
+  "families": 20,
+  "challenge_n": 60
+ },
+ "A_random_split": {
+  "ml": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "accuracy": 1.0,
+   "tn": 221,
+   "fp": 0,
+   "fn": 0,
+   "tp": 310,
+   "n": 531
+  },
+  "rules": {
+   "precision": 1.0,
+   "recall": 0.968,
+   "f1": 0.984,
+   "accuracy": 0.981,
+   "tn": 221,
+   "fp": 0,
+   "fn": 10,
+   "tp": 300,
+   "n": 531
+  },
+  "hybrid": {
+   "precision": 1.0,
+   "recall": 0.987,
+   "f1": 0.994,
+   "accuracy": 0.992,
+   "tn": 221,
+   "fp": 0,
+   "fn": 4,
+   "tp": 306,
+   "n": 531
+  }
+ },
+ "B_unseen_families": {
+  "ml": {
+   "precision": 0.813,
+   "recall": 0.827,
+   "f1": 0.82,
+   "accuracy": 0.788,
+   "tn": 541,
+   "fp": 196,
+   "fn": 178,
+   "tp": 853,
+   "n": 1768
+  },
+  "rules": {
+   "precision": 0.92,
+   "recall": 0.911,
+   "f1": 0.915,
+   "accuracy": 0.902,
+   "tn": 655,
+   "fp": 82,
+   "fn": 92,
+   "tp": 939,
+   "n": 1768
+  },
+  "hybrid": {
+   "precision": 0.928,
+   "recall": 0.891,
+   "f1": 0.909,
+   "accuracy": 0.896,
+   "tn": 666,
+   "fp": 71,
+   "fn": 112,
+   "tp": 919,
+   "n": 1768
+  }
+ },
+ "B_per_family_accuracy_hybrid": {
+  "legit_admin": 1.0,
+  "legit_events": 0.389,
+  "legit_exam_notice": 1.0,
+  "legit_fee": 1.0,
+  "legit_otp_security": 0.979,
+  "legit_personal": 1.0,
+  "legit_services": 0.969,
+  "legit_timetable": 1.0,
+  "phish_attachment": 0.321,
+  "phish_exam": 0.985,
+  "phish_generic": 1.0,
+  "phish_hinglish": 0.989,
+  "phish_impersonation": 0.865,
+  "phish_job": 0.989,
+  "phish_money": 0.725,
+  "phish_password": 1.0,
+  "phish_refund": 1.0,
+  "phish_storage_wifi": 0.92,
+  "phish_subtle": 0.932,
+  "phish_suspension": 0.991
+ },
+ "C_challenge": {
+  "ml": {
+   "precision": 0.848,
+   "recall": 0.933,
+   "f1": 0.889,
+   "accuracy": 0.883,
+   "tn": 25,
+   "fp": 5,
+   "fn": 2,
+   "tp": 28,
+   "n": 60
+  },
+  "rules": {
+   "precision": 0.906,
+   "recall": 0.967,
+   "f1": 0.935,
+   "accuracy": 0.933,
+   "tn": 27,
+   "fp": 3,
+   "fn": 1,
+   "tp": 29,
+   "n": 60
+  },
+  "hybrid": {
+   "precision": 0.935,
+   "recall": 0.967,
+   "f1": 0.951,
+   "accuracy": 0.95,
+   "tn": 28,
+   "fp": 2,
+   "fn": 1,
+   "tp": 29,
+   "n": 60
+  }
+ },
+ "D_adversarial_recall_synthetic": {
+  "baseline (unmodified)": {
+   "no normalisation": 0.987,
+   "with normalisation": 0.987
+  },
+  "strip pressure words": {
+   "no normalisation": 0.987,
+   "with normalisation": 0.987
+  },
+  "obfuscate keywords": {
+   "no normalisation": 0.965,
+   "with normalisation": 0.987
+  },
+  "remove link": {
+   "no normalisation": 0.765,
+   "with normalisation": 0.765
+  },
+  "hide sender": {
+   "no normalisation": 0.987,
+   "with normalisation": 0.987
+  }
+ },
+ "D_adversarial_recall_handwritten": {
+  "baseline (unmodified)": {
+   "no normalisation": 0.967,
+   "with normalisation": 0.967
+  },
+  "strip pressure words": {
+   "no normalisation": 0.967,
+   "with normalisation": 0.967
+  },
+  "obfuscate keywords": {
+   "no normalisation": 0.933,
+   "with normalisation": 0.967
+  },
+  "remove link": {
+   "no normalisation": 0.633,
+   "with normalisation": 0.633
+  },
+  "hide sender": {
+   "no normalisation": 0.967,
+   "with normalisation": 0.967
+  }
+ },
+ "E_threshold_sweep_hybrid": {
+  "0.2": {
+   "B_prec": 0.908,
+   "B_rec": 0.937,
+   "C_prec": 0.879,
+   "C_rec": 0.967
+  },
+  "0.3": {
+   "B_prec": 0.911,
+   "B_rec": 0.923,
+   "C_prec": 0.906,
+   "C_rec": 0.967
+  },
+  "0.4": {
+   "B_prec": 0.922,
+   "B_rec": 0.906,
+   "C_prec": 0.935,
+   "C_rec": 0.967
+  },
+  "0.5": {
+   "B_prec": 0.928,
+   "B_rec": 0.891,
+   "C_prec": 0.935,
+   "C_rec": 0.967
+  },
+  "0.6": {
+   "B_prec": 0.928,
+   "B_rec": 0.877,
+   "C_prec": 0.935,
+   "C_rec": 0.967
+  },
+  "0.7": {
+   "B_prec": 0.927,
+   "B_rec": 0.85,
+   "C_prec": 0.966,
+   "C_rec": 0.933
+  },
+  "0.8": {
+   "B_prec": 0.925,
+   "B_rec": 0.822,
+   "C_prec": 0.964,
+   "C_rec": 0.9
+  }
+ },
+ "E_challenge_errors_hybrid": [
+  {
+   "truth": "phishing",
+   "p": 0.09,
+   "sender": "+91 9871112233",
+   "text": "Sir, your electricity bill is not updated. Power will be disconnected tonight 9:30 pm. Call 9871112233 immediately"
+  },
+  {
+   "truth": "legit",
+   "p": 0.94,
+   "sender": "HDFC Bank <alerts@hdfcbank.net>",
+   "text": "HDFC Bank: Rs 2,300 debited at SWIGGY on 22-Oct. Not you? Call the number on your card or block it via NetBanking at hdfcbank.com"
+  },
+  {
+   "truth": "legit",
+   "p": 0.68,
+   "sender": "+91 9811122334",
+   "text": "Beta, I'm sending your pocket money. Send me your new account number tonight."
+  }
+ ],
+ "E_unseen_family_errors_by_family": {
+  "phish_attachment": 55,
+  "legit_events": 66,
+  "phish_impersonation": 10,
+  "phish_money": 30,
+  "legit_services": 3,
+  "phish_storage_wifi": 7,
+  "phish_job": 1,
+  "phish_hinglish": 1,
+  "legit_otp_security": 2,
+  "phish_subtle": 6,
+  "phish_exam": 1,
+  "phish_suspension": 1
+ }
+}

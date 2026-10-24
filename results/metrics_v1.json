@@ -1,0 +1,277 @@
+{
+ "dataset": {
+  "n": 1571,
+  "phishing": 837,
+  "legit": 734,
+  "families": 18,
+  "challenge_n": 60
+ },
+ "A_random_split": {
+  "ml": {
+   "precision": 1.0,
+   "recall": 1.0,
+   "f1": 1.0,
+   "accuracy": 1.0,
+   "tn": 221,
+   "fp": 0,
+   "fn": 0,
+   "tp": 251,
+   "n": 472
+  },
+  "rules": {
+   "precision": 1.0,
+   "recall": 0.952,
+   "f1": 0.976,
+   "accuracy": 0.975,
+   "tn": 221,
+   "fp": 0,
+   "fn": 12,
+   "tp": 239,
+   "n": 472
+  },
+  "hybrid": {
+   "precision": 1.0,
+   "recall": 0.972,
+   "f1": 0.986,
+   "accuracy": 0.985,
+   "tn": 221,
+   "fp": 0,
+   "fn": 7,
+   "tp": 244,
+   "n": 472
+  }
+ },
+ "B_unseen_families": {
+  "ml": {
+   "precision": 0.861,
+   "recall": 0.927,
+   "f1": 0.893,
+   "accuracy": 0.882,
+   "tn": 609,
+   "fp": 125,
+   "fn": 61,
+   "tp": 776,
+   "n": 1571
+  },
+  "rules": {
+   "precision": 0.903,
+   "recall": 0.932,
+   "f1": 0.917,
+   "accuracy": 0.91,
+   "tn": 650,
+   "fp": 84,
+   "fn": 57,
+   "tp": 780,
+   "n": 1571
+  },
+  "hybrid": {
+   "precision": 0.922,
+   "recall": 0.949,
+   "f1": 0.935,
+   "accuracy": 0.93,
+   "tn": 667,
+   "fp": 67,
+   "fn": 43,
+   "tp": 794,
+   "n": 1571
+  }
+ },
+ "B_per_family_accuracy_hybrid": {
+  "legit_admin": 1.0,
+  "legit_events": 0.394,
+  "legit_exam_notice": 1.0,
+  "legit_fee": 1.0,
+  "legit_otp_security": 1.0,
+  "legit_personal": 1.0,
+  "legit_services": 0.989,
+  "legit_timetable": 1.0,
+  "phish_exam": 0.985,
+  "phish_generic": 0.977,
+  "phish_hinglish": 0.976,
+  "phish_impersonation": 0.722,
+  "phish_job": 0.989,
+  "phish_password": 1.0,
+  "phish_refund": 1.0,
+  "phish_storage_wifi": 0.977,
+  "phish_subtle": 0.852,
+  "phish_suspension": 1.0
+ },
+ "C_challenge": {
+  "ml": {
+   "precision": 0.889,
+   "recall": 0.8,
+   "f1": 0.842,
+   "accuracy": 0.85,
+   "tn": 27,
+   "fp": 3,
+   "fn": 6,
+   "tp": 24,
+   "n": 60
+  },
+  "rules": {
+   "precision": 0.862,
+   "recall": 0.833,
+   "f1": 0.847,
+   "accuracy": 0.85,
+   "tn": 26,
+   "fp": 4,
+   "fn": 5,
+   "tp": 25,
+   "n": 60
+  },
+  "hybrid": {
+   "precision": 0.926,
+   "recall": 0.833,
+   "f1": 0.877,
+   "accuracy": 0.883,
+   "tn": 28,
+   "fp": 2,
+   "fn": 5,
+   "tp": 25,
+   "n": 60
+  }
+ },
+ "D_adversarial_recall_synthetic": {
+  "baseline (unmodified)": {
+   "no normalisation": 0.968,
+   "with normalisation": 0.972
+  },
+  "strip pressure words": {
+   "no normalisation": 0.964,
+   "with normalisation": 0.964
+  },
+  "obfuscate keywords": {
+   "no normalisation": 0.94,
+   "with normalisation": 0.972
+  },
+  "remove link": {
+   "no normalisation": 0.629,
+   "with normalisation": 0.629
+  },
+  "hide sender": {
+   "no normalisation": 0.98,
+   "with normalisation": 0.98
+  }
+ },
+ "D_adversarial_recall_handwritten": {
+  "baseline (unmodified)": {
+   "no normalisation": 0.8,
+   "with normalisation": 0.8
+  },
+  "strip pressure words": {
+   "no normalisation": 0.8,
+   "with normalisation": 0.8
+  },
+  "obfuscate keywords": {
+   "no normalisation": 0.767,
+   "with normalisation": 0.8
+  },
+  "remove link": {
+   "no normalisation": 0.4,
+   "with normalisation": 0.4
+  },
+  "hide sender": {
+   "no normalisation": 0.867,
+   "with normalisation": 0.867
+  }
+ },
+ "E_threshold_sweep_hybrid": {
+  "0.2": {
+   "B_prec": 0.889,
+   "B_rec": 0.971,
+   "C_prec": 0.839,
+   "C_rec": 0.867
+  },
+  "0.3": {
+   "B_prec": 0.912,
+   "B_rec": 0.964,
+   "C_prec": 0.839,
+   "C_rec": 0.867
+  },
+  "0.4": {
+   "B_prec": 0.912,
+   "B_rec": 0.952,
+   "C_prec": 0.929,
+   "C_rec": 0.867
+  },
+  "0.5": {
+   "B_prec": 0.922,
+   "B_rec": 0.949,
+   "C_prec": 0.926,
+   "C_rec": 0.833
+  },
+  "0.6": {
+   "B_prec": 0.922,
+   "B_rec": 0.94,
+   "C_prec": 0.92,
+   "C_rec": 0.767
+  },
+  "0.7": {
+   "B_prec": 0.921,
+   "B_rec": 0.932,
+   "C_prec": 0.92,
+   "C_rec": 0.767
+  },
+  "0.8": {
+   "B_prec": 0.92,
+   "B_rec": 0.925,
+   "C_prec": 0.958,
+   "C_rec": 0.767
+  }
+ },
+ "E_challenge_errors_hybrid": [
+  {
+   "truth": "phishing",
+   "p": 0.11,
+   "sender": "+91 9123456780",
+   "text": "Quick favour: I'm stuck at the airport and my card is blocked. Could you do a UPI transfer of 5000? I'll return it tonight. Sent from Dr. Ku"
+  },
+  {
+   "truth": "phishing",
+   "p": 0.09,
+   "sender": "",
+   "text": "Dear applicant, your hostel allotment is confirmed. Pay the confirmation amount of Rs 12,000 to the account below within 2 days or your seat"
+  },
+  {
+   "truth": "phishing",
+   "p": 0.49,
+   "sender": "+91 9988776655",
+   "text": "From the Office of the Registrar: your degree certificate is ready. Courier charges Rs 350 payable via UPI to 9812345678"
+  },
+  {
+   "truth": "phishing",
+   "p": 0.0,
+   "sender": "",
+   "text": "Please find the attached invoice for your records. Open the attachment and enable macros to view the content."
+  },
+  {
+   "truth": "phishing",
+   "p": 0.13,
+   "sender": "+91 9871112233",
+   "text": "Sir, your electricity bill is not updated. Power will be disconnected tonight 9:30 pm. Call 9871112233 immediately"
+  },
+  {
+   "truth": "legit",
+   "p": 0.98,
+   "sender": "HDFC Bank <alerts@hdfcbank.net>",
+   "text": "HDFC Bank: Rs 2,300 debited at SWIGGY on 22-Oct. Not you? Call the number on your card or block it via NetBanking at hdfcbank.com"
+  },
+  {
+   "truth": "legit",
+   "p": 0.8,
+   "sender": "+91 9811122334",
+   "text": "Beta, I'm sending your pocket money. Send me your new account number tonight."
+  }
+ ],
+ "E_unseen_family_errors_by_family": {
+  "phish_subtle": 13,
+  "legit_events": 66,
+  "phish_impersonation": 22,
+  "phish_storage_wifi": 2,
+  "phish_generic": 2,
+  "phish_hinglish": 2,
+  "phish_job": 1,
+  "phish_exam": 1,
+  "legit_services": 1
+ }
+}
